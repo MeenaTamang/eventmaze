@@ -1,0 +1,99 @@
+.section-container{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 280px);
+    left: 280px;
+    transition: all 0.3s ease;
+}
+.section_content{
+    font-size: 5px;
+    font-weight: 500;
+    color: #707070;
+    margin: 20px;
+}
+:root {
+    --color1: #a68cb6;
+    --color4: #734a8d;
+    --black: #000;
+    --white: #fff;
+    --lightpurple: #F6F5FF;
+    --red: rgb(238, 62, 62);
+}
+
+/* view_venues.php */
+.display_wed table,
+.display_corporate table,
+.display_regular table,
+.display_mega table,
+.display_event table,
+.display_booking table,
+.display_userdetail table {
+    width: 100%;
+    text-align: center;
+  }
+  .display_wed table thead th,
+  .display_corporate table thead th,
+  .display_regular table thead th,
+  .display_mega table thead th,
+  .display_event table thead th,
+  .display_booking table thead th,
+  .display_userdetail table thead th{
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: var(--color1);
+    color: var(--white);
+  }
+  td {
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--color1);
+    border: 1px solid var(--white);
+    text-transform: uppercase;
+  }
+  
+  .empty_text {
+    background-color: var(--color1);
+    padding: 2rem 2rem;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+  }
+  .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .delete_wed_btn,
+  .update_wed_btn,
+  .delete_corporate_btn,
+  .update_corporate_btn,
+  .delete_regular_btn,
+  .update_regular_btn,
+  .delete_mega_btn,
+  .update_mega_btn,
+  .delete_event_btn,
+  .update_event_btn{
+    text-align: center;
+    color: var(--red);
+    font-size: 1rem;
+    padding: 0 1rem;
+    cursor: pointer;
+  }
+  .update_wed_btn,
+  .update_corporate_btn,
+  .update_regular_btn,
+  .update_mega_btn,
+  .update_event_btn {
+  color: var(--color1);
+  }
+  /* .venues_container_box {
+    text-align: center;
+    height: 70%;
+  } */
+  
+  img {
+    width: 35%;
+    margin: 0 auto;
+  }
+  

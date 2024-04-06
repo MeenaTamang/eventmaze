@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>EventMaze:Login</title>
+  </head>
+  <body>
+
+    
+    
+    <div class="wrapper">
+      <nav class="nav">
+        <div class="nav-logo">
+          <img src="../landingPage/logo.png" />
+        </div>
+      </nav>
+      
+      <!----------------------------Form box  -------------------------------->
+      <div class="form-box">
+        
+
+        <!---------------------login form  --------------------------->
+        <form action="adminlog.php" method="post" id="login-form" class="login-form">
+          <div class="login-container" id="login">
+            <div class="top">
+              <div class="user-icon"><i class='bx bx-user-circle'></i></div>
+              <header>Admin</header>
+            </div>
+
+            <div class="input-box">
+              <input type="text" class="input-field" placeholder="Username" name="username" id="username" required/>
+              <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box">
+              <input type="password" class="input-field" placeholder="Password" name="password" id="password" required/>
+              <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+              <input type="submit" class="submit" name="submit" value="Log In" />
+            </div>
+            
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="style.js"></script>
+
+  </body>
+</html>

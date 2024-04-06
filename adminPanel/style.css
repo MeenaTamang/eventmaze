@@ -1,0 +1,309 @@
+/* gooogle font link  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+    /* colors */
+    --body-color:#E4E9F7;
+    --sidebar-color:#FFF;
+    --primary-color:#a68cb6;
+    --primary-color-light:#F6F5FF;
+    --toggle-color:#DDD;
+    --text-color:#707070;
+
+    /* transition */
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    /* overflow: hidden; this stopped me from scrolling my webpage*/
+    background: var(--body-color);
+}
+
+body.dark{
+    --body-color:#18191A;
+    --sidebar-color:#242526;
+    --primary-color:#3A3B3C;
+    --primary-color-light:#3A3B3C;
+    --toggle-color:#FFF;
+    --text-color:#CCC;
+}
+
+.wrapper{
+    width: 1000px;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: var(--sidebar-color);
+    padding: 6px 14px;
+    transition: var(--tran-05);
+}
+
+.sidebar.active{
+    width: 280px;
+}
+
+/* logo section */
+.logo_container{
+    position: relative;
+    display: flex;
+    min-width: 50px;
+    height: 50px;
+}
+
+.logo img{
+    width: 50px;
+    border-radius: 6px;
+}
+
+.logo{
+    min-width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo_content{
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+    transition: var(--tran-03);
+    white-space: nowrap;
+    margin-top: 6px;
+    margin-left: 5px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar.active .logo_content{
+    opacity: 1;
+}
+
+.logo_content .name{
+    font-weight: 600;
+}
+
+.logo_content .slogan{
+    margin-top: -2px;
+    font-size: 11px;
+}
+
+
+.logo i{
+    font-size: 28px;
+    margin-right: 5px;
+}
+
+.logo_content .logo .logo_name{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.sidebar.active #btn{
+    left: 108%;
+    transform: translateX(-50%) rotate(180deg);
+}
+
+body.dark .sidebar #btn{
+    color: var(--text-color);
+}
+
+/* profile section */
+.profile_container{
+    position: relative;
+    display: flex;
+    margin-top: 25px;
+    background: var(--primary-color-light);
+    border-radius: 6px;
+    transition: var(--tran-05);
+    z-index: 99;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    height: 50px;
+}
+
+.profile i{
+    min-width: 50px;
+    text-align: center;
+    font-size: 35px;
+    color: var(--text-color);
+}
+
+.profile_details ul{
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    text-align: left;
+    opacity: 0;
+    transition: var(--tran-05);
+    pointer-events: none;
+}
+
+.sidebar.active .profile_details ul{
+    opacity: 1;
+}
+
+.profile_details ul .username{
+    margin-top: -15px;
+}
+
+.username{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.email{
+    font-size: 10px;
+}
+
+/* sidebar details section  */
+.sidebar ul{
+    margin-top: 20px;
+}
+
+.sidebar ul li{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 0 5px;
+    list-style: none;
+    line-height: 50px;
+}
+
+.sidebar ul li a{
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: var(--tran-04);
+    border-radius: 12px;
+    /* while closing slidebar the icons gets jumpled up and this whitewrap evens it out  */
+    white-space: nowrap;
+}
+
+.sidebar ul li span{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar.active ul li span{
+    opacity: 1;
+}
+
+
+.sidebar ul li a:hover{
+    background: var(--primary-color);
+    color: var(--primary-color-light);
+}
+
+body.dark .sidebar ul li a:hover{
+    color: var(--text-color);
+}
+
+.sidebar ul li a i{
+    height: 45px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* bottom section  */
+.sidebar .bottom_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* goes to the bottom of the list  */
+    height: 39%; 
+}
+
+.bottom_container li {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 0 5px;
+    list-style: none;
+    line-height: 50px;
+} 
+
+.logout_content a{
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: var(--tran-04);
+    border-radius: 12px;
+} 
+
+.logout{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar.active .logout{
+    opacity: 1;
+}
+
+.logout_content a:hover{
+    background: var(--primary-color);
+    color: var(--primary-color-light);
+} 
+
+body.dark .logout_content a:hover{
+    color: var(--text-color);
+}
+
+.logout_content a i{
+    height: 50px;
+    min-width: 45px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+/* for responsiveness */
+@media only screen and (max-width: 600px){
+    .sidebar.active{
+        width: 75px;
+    }
+
+    .logo_content{
+        display: none;
+    }
+    
+    .profile_details ul{
+        display: none;
+    }
+    
+    .sidebar ul li span{
+        display: none;
+    }
+    
+    .logout_content span{
+        display: none;
+    }
+    
+}

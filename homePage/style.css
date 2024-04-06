@@ -1,0 +1,138 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    /* overflow: hidden; this stopped me from scrolling my webpage*/
+    background: #F6F5FF;
+    display: flex;
+    background-image: url('bg1.jpeg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.menu{
+    position: fixed;
+    height: 100%;
+    width: 340px;
+    text-align: center;
+    background-color: #a68cb6;
+}
+.logo{
+    width: 350px;
+    padding: 10px;
+    margin-top: 80px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 2px;
+    display: list-item;
+    padding: 20px;
+}
+.menu a:hover{
+    border-bottom: 2px solid #fff;
+    transition: 0.3;
+    letter-spacing: 4px;
+
+}
+.menu .bottom_container{
+    margin-top: 180px;
+}
+
+
+.media-icon ul {
+    display: flex; /* Make the unordered list display flexbox items */
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+  .media-icon ul li { /* Not needed, but can improve clarity */
+    margin: 0 5px; /* Add some margin between icons (optional) */
+}
+
+.media-icon a {
+    display: inline-flex; /* Make anchors behave like flex items */
+    align-items: center; /* Align icons vertically within links */
+    justify-content: center; /* Center icons horizontally within links */
+    margin-left: 35px;
+}
+
+
+
+
+/* Footer */
+.footer {
+    margin-top: 80px;
+    height: auto;
+    background: #a68cb6;
+    color: #fff;
+    border-radius: 3rem 3rem 0 0;
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    gap: 2rem;
+}
+.logo-container{
+    display: flex;
+    margin-left: 10%;
+    margin-top: 20%;
+    width: 20px;
+}
+.logo-container img {
+    margin-left: 10%;
+    margin-bottom: auto;
+    width: 90px;
+    height: auto;
+    flex: 1;
+}
+.logo-container h2{
+    margin-top: 80%;
+    /* margin-left: 2%; */
+    flex: 1;
+
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+.footer-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10%;
+    margin-left: 10%;
+}
+.footer-box h3 {
+    margin-top: 20%;
+    margin-bottom: 1rem;
+    font-size: 1.138rem;
+    font-weight: 400;
+}
+.footer-box a {
+    text-decoration: none;
+    font-size: 0.838rem;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+.footer-box a:hover {
+    color: #a68cb6;
+}
+.footer-box .social {
+    margin-bottom: 5%;
+}
+.social a {
+    font-size: 20px;
+    margin-right: 1rem;
+}

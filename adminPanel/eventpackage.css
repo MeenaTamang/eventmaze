@@ -1,0 +1,48 @@
+.section-container{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 280px);
+    left: 280px;
+    transition: all 0.3s ease;
+}
+.section_content{
+    font-size: 25px;
+    font-weight: 500;
+    color: #707070;
+    margin: 20px;
+}
+/* heading text section  */
+.text h3{
+    margin-top: 120px;
+}
+.text h3,
+.text p{
+    /* margin-top: 20px; */
+    text-align: center;
+}
+/* buttons */
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%; /* Adjust as needed */
+}
+
+.buttons .button{
+    position: relative;
+    color: #fff;
+    padding: 14px 40px;
+    background: linear-gradient(90deg, #8c60c6, #b178ce);
+    border-radius: 45px;
+    margin: 0 15px;
+    font-size: 25px;
+    font-weight: 400;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 120px;
+}
+.button:hover{
+    transform: translateY(-10px);
+    transition: var(--tran-05);
+}
+

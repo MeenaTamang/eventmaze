@@ -1,0 +1,18 @@
+.section-container{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 340px);
+    left: 340px;
+    transition: all 0.3s ease;
+}
+.section_content{
+    font-size: 25px;
+    font-weight: 500;
+    color: #707070;
+    margin: 20px;
+}
+/* heading text section  */
+.text h3,
+.text p{
+    text-align: center;
+}

@@ -1,0 +1,27 @@
+.section-container{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 340px);
+    left: 340px;
+    transition: all 0.3s ease;
+}
+.section_content{
+    font-size: 25px;
+    font-weight: 500;
+    color: #707070;
+    margin: 20px;
+}
+/* heading text section  */
+.text h3,
+.text h2{
+    text-align: left;
+}
+h2{
+    color: #454444;
+
+}
+.text .paragraph1{
+    text-align: justify;
+    font-size: 19.5px;
+    color: #454444;
+}

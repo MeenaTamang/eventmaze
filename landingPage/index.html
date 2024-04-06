@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EventMaze</title>
+
+    <!-- icons -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- Swiper Gallery css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
+    <!-- css file -->
+    <link rel="stylesheet" href="style1.css" />
+    
+  </head>
+  <body>
+    <div class="nav-container">
+      <video autoplay loop muted plays-inline class="back-video">
+        <source src="video.mp4" type="video/mp4" />
+      </video>
+
+      <!-- Nav list -->
+      <nav>
+        <img src="logo.png" class="logo" />
+        <ul>
+          <li><a href="#home" class="link active">Home</a></li>
+          <li><a href="#about" class="link">About</a></li>
+          <li><a href="#services" class="link">Service</a></li>
+          <li><a href="#gallery" class="link">Gallery</a></li>
+        </ul>
+        <div class="nav-button">
+          <button class="btn white-btn" id="loginBtn" onclick="toggleDropdown()">Login</button>
+          <div id="dropdown-content" class="dropdown-content">
+            <a href="../loginPage/login.html">user</a>
+            <a href="../loginPage/adminlog.html">admin</a>
+          </div>
+        </div>
+      </nav>
+      <!-- Log In Button -->
+      <div class="content">
+        <h1>EventMaze</h1>
+        <a href="#about">Explore</a>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div  id="about" class="about-container">
+      <div class="about-video">
+        <video autoplay loop muted plays-inline>
+          <source src="aboutvideo.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="about-text">
+        <span>About Us</span>
+        <h2>"Welcome to the future of event planning!"</h2>
+        <!-- <br> -->
+        <p>
+          At Event Maze,<br/>
+          we're not just organizing events; we're creating unforgettable experiences.With our cutting-edge system,<br/>
+          we're turning the ordinary into extraordinaryFrom collaborative planning to interactive floor plans,we're <br/>
+          all about making your event the highlight of the year.So, let's dive in and make your event dreams <br/>
+          come true!</br><br/>
+          Join us in transforming the way events are planned and executed.
+        </p>
+      </div>
+    </div>
+
+    <!-- Services -->
+    <div id="services" class="services">
+      <div class="sheading">
+        <span>Services</span>
+        <h2>Services we provide to our customer!</h2>
+      </div>
+      <div class="services-box">
+      <!-- Box-1 -->
+      <div class="box">
+        <a href="../homePage/eventPlanner.php"><i class='bx bx-home-alt icon'></i></a>
+        <h3>Event Planner Services</h3>
+        <p>
+          Personalized selection of event packages.
+        </p>
+      </div>
+      <!-- Box-2 -->
+      <div class="box">
+        <a href="../homePage/eventHappen.php"><i class='bx bx-party icon'></i></a>
+        <h3>Event Happening</h3>
+        <p>
+          Discover, Register for, and Learn more about each event in one place.
+        </p>
+      </div>
+      <!-- Box-3 -->
+      <div class="box">
+        <a href="../loginPage/login.html" target="_blank"><i class='bx bx-detail' ></i></a>
+        <h3>Booking Details</h3>
+        <p>
+          Your Cart: Your Personal Event Dashboard.
+        </p>
+      </div>
+      <!-- Box-4 -->
+      <div class="box">
+        <a href="../homePage/review.php"><i class='bx bxs-comment-detail'></i></a>
+        <h3>Review</h3>
+        <p>
+          Share your stories, post your photos, and let us know how it went.
+        </p>
+      </div>
+    </div>
+    </div>
+
+      <!-- Gallery -->
+      <div id="gallery" class="gallery">
+        <div class="heading">
+          <span>Gallery</span>
+          <h2>Our Featured Memories</h2>
+          <p>Some happy memories we shared with our satisfied customer</p>
+        </div>
+        <div class="home-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img1.jpeg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img2.jpeg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img3.jpeg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img4.jpeg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img5.jpeg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img6.jpeg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img7.jpeg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img8.jpeg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img9.jpeg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img11.jpeg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img12.jpeg" alt="">
+            </div>
+          </div>
+        </div>
+
+        
+      <!-- footer -->
+      <div class="footer">
+        <div class="footer-container">
+          <div class="logo-container">
+            <img src="emlogo.png" class="emlogo">
+            <h2>EventMaze</h2>
+          </div>
+          <div class="footer-box">
+            <h3>Company</h3>
+              <a href="#about">About Us</a>
+              <a href="../loginPage/login.html" target="_blank">Account</a>
+              <a href="#about">Terms & Condition</a>
+              <a href="#about">Privacy & Policy</a>
+          </div>
+          <div class="footer-box">
+            <h3>Useful Links</h3>
+              <a href="../loginPage/login.html" target="_blank">EventPlanner</a>
+              <a href="../loginPage/login.html" target="_blank">EventHappen</a>
+              <a href="../loginPage/login.html" target="_blank">Entertainment</a>
+              <a href="../loginPage/login.html" target="_blank">And others</a>
+          </div>
+          <div class="footer-box">
+            <h3>Contact</h3>
+            <a href="#">01-354651</a>
+            <a href="#">eventmaze@gmail.com</a>
+            <div class="social">
+              <ul>
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <a href="#"><i class="bx bxl-twitter"></i></a>
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Swiper js -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+      <!-- Script file -->
+  <script src="app.js"></script>
+  </body>
+</html>

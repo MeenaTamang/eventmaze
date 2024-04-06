@@ -1,0 +1,169 @@
+.row{
+    width: 100%;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    overflow-x: hidden;
+    padding: 3rem 0;
+}
+.row .imgWrapper{
+    overflow: hidden;
+}
+.row .imgWrapper img{
+    width:  100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+.row .imgWrapper:hover img{
+    transform: scale(1.25);
+}
+.row .contentWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-left: 30px; */
+    /* text-align: justify; */
+}
+.row .contentWrapper span.textWrapper{
+    display: block;
+    font-size: 30px;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    color: #913bc6;
+    font-size: 40px;
+    font-weight: 700;
+}
+.row .contentWrapper .paragraph2{
+    font-size: 20px;
+    font-weight: 70;
+    color: #913bc6;
+    padding-bottom: 20px;
+}
+.row .contentWrapper .paragraph3{
+font-size: 19.5px;
+line-height: 25px;
+padding-bottom: 25px;
+color: #454444;
+}
+.view-btn{
+    color: #913bc6;
+    background: transparent;
+    /* background-color: #8fabba; */
+    padding: 10px 20px;
+    width: 130px;
+    border-radius: 15px;
+    border:  2px solid #913bc6;
+    outline: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+.view-btn:hover{
+    background: #fff;
+}
+
+/* heading of package-container */
+.package-heading{
+    padding: 40px 0px;
+}
+.package-heading .package-text h2{
+    color: #913bc6;
+    padding: 5px 0px;
+}
+.package-heading h3{
+    padding: 5px 0px;
+}
+
+
+    /* Package-containers */
+.package .package-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.package-header img{
+    max-width: 50%;
+    max-height: 50%;
+    border-radius: 15px;
+}
+.package-container{
+    display: grid;
+    grid-template-columns: auto auto; /* Creates two columns with automatic width */    gap:25px;
+    justify-content: space-evenly;
+    flex-wrap: wrap
+}
+
+    /* justify-content: center;
+    align-items: center; */
+    
+    /* display: grid;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 25px;
+    height:100vh */
+.package .package-header, p{
+    padding: 10px;
+}
+.package .package-body{
+    text-align: center;
+    margin: 5px 0px;
+}
+.package .package-footer button{
+    width: 50%;
+    padding: 8px;
+    /* border: none; */
+
+    color: #913bc6;
+    background: transparent;
+    padding: 10px 20px;
+    width: 130px;
+    border-radius: 15px;
+    border:  2px solid #913bc6;
+    outline: none;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+}
+.package .package-footer button a{
+    text-decoration: none;
+}
+.package .package-footer button:hover{
+    background: #a68cb6;
+}
+.package .package-footer{
+    text-align: center;
+}
+.package{
+    background: #fff;
+    padding: 10px 0px;
+    border-radius: 20px;
+    /* transition: 0.30s;
+    cursor: pointer; */
+}
+.package .package-body h3{
+    font-size: 30px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    color: #913bc6;
+    /* font-size: 40px;
+    font-weight: 700; */
+}
+.package .package-body .paragraph2{
+    font-size: 20px;
+    font-weight: 70;
+    color: #913bc6;
+    padding-bottom: 20px;
+}
+.package .package-body .paragraph3{
+    font-size: 19.5px;
+    line-height: 25px;
+    padding-bottom: 25px;
+    color: #454444;
+    }
