@@ -2,7 +2,7 @@
 <?php include 'nav_bar.php'?>
 
 <!-- including php logic-connecting to database -->
-<?php include 'connect.php'?>
+<?php include '../loginPage/db.php'?>
 
 
 <!DOCTYPE html>

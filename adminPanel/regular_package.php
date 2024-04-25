@@ -1,7 +1,7 @@
 <!-- nav_Bar -->
 <?php include 'nav_bar.php'?>
 
-<?php include 'connect.php';
+<?php include '../loginPage/db.php';
     if(isset($_POST['add_regular'])){
         $regular_name=$_POST['regular_name'];
         $regular_summary=$_POST['regular_summary'];
@@ -14,8 +14,8 @@
         $regular_image_temp_name=$_FILES['regular_image']['tmp_name'];
         $regular_image_folder='images/'.$regular_image;
         
-        $insert_query=mysqli_query($conn,"insert into `regular` (name, summary, veg, nonveg, features, price, population, image) values
-        ('$regular_name','$regular_summary','$regular_veg','$regular_nonveg','$regular_feature','$regular_price','$regular_population','$regular_image')") or die("Insert query failed");
+        $insert_query=mysqli_query($conn,"insert into `events` (name, summary, veg, nonveg, features, price, population, image, type) values
+        ('$regular_name','$regular_summary','$regular_veg','$regular_nonveg','$regular_feature','$regular_price','$regular_population','$regular_image', 'regular')") or die("Insert query failed");
         if($insert_query){
             move_uploaded_file($regular_image_temp_name,$regular_image_folder);
             $display_message= "Regular package inserted Successfully";

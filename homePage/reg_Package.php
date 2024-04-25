@@ -92,15 +92,15 @@
 
 
 <!------- -----------------connecting------------------ -->
-<?php include '../adminPanel/connect.php';?>
+<?php include '../loginPage/db.php';?>
 
             <!-- -------Package-container------ -->
             <div class="package-container">
             <?php
-                $select_regular=mysqli_query($conn,"Select *from `regular`");
+                $select_regular=mysqli_query($conn,"Select *from `events` where type='regular'");
                 if(mysqli_num_rows($select_regular)>0){
                 while($fetch_regular=mysqli_fetch_assoc($select_regular)){
-
+                    $eventID=$fetch_regular["id"];
                 ?>
 
             <div class="package">
@@ -128,7 +128,7 @@
                     <button>
                             <?php
                             if(isset($_SESSION["userId"])){
-                            echo '<a href="calender.php" class="package-button">Book Now</a>';
+                            echo '<a href="selectEvent.php?id='.$eventID.'" class="package-button">Book Now</a>';
 
                             }else{
                             echo '<a href="../loginPage/login.html" target="_blank" class="package-button">Book Now</a>';

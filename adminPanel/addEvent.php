@@ -1,7 +1,7 @@
 <!-- nav_Bar -->
 <?php include 'nav_bar.php'?>
 
-<?php include 'connect.php';
+<?php include '../loginPage/db.php';
     if(isset($_POST['add_eventhappen'])){
         $event_name=$_POST['event_name'];
         $event_image=$_FILES['event_image']['name'];

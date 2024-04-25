@@ -2,7 +2,7 @@
 <?php include 'nav_bar.php'?>
 
 <!-- !-- including php logic-connecting to database -->
-<?php include 'connect.php';
+<?php include '../loginPage/db.php';
 
 
 // update logic
@@ -21,7 +21,7 @@ if(isset($_POST['update_corporate'])){
     $update_corporate_image_folder='images/'.$update_corporate_image;
 
     // update query
-    $update_corporate=mysqli_query($conn, "Update `corporate` set
+    $update_corporate=mysqli_query($conn, "Update `events` set
     name='$update_corporate_name',summary='$update_corporate_summary',veg='$update_corporate_veg',nonveg='$update_corporate_nonveg',price='$update_corporate_price',population='$update_corporate_population',
     image='$update_corporate_image' where id=$update_corporate_id");
     if($update_corporate){
@@ -87,7 +87,7 @@ if(isset($_POST['update_corporate'])){
             if(isset($_GET['edit'])){
                 $edit_id=$_GET['edit'];
                 // echo $edit_id;
-                $edit_query=mysqli_query($conn, "Select * from `corporate` where id=$edit_id");
+                $edit_query=mysqli_query($conn, "Select * from `events` where id=$edit_id");
                 if(mysqli_num_rows($edit_query)>0){
                     $fetch_data=mysqli_fetch_assoc($edit_query);
                         // $row=$fetch_data['price'];

@@ -46,7 +46,7 @@ foreach($daysOfWeek as $day){
   $calendar .= "</tr><tr>";
   $currentDay = 1;
 
-  //the variable $dayOfWeek will make sure that there must be only 7 cloumned on our table
+  //the variable $dayOfWeek will make sure that there must be only 7 columned on our table
   if($dayOfWeek > 0){
     for($k=0; $k<$dayOfWeek; $k++){
       $calendar .= "<td class='empty'></td>";

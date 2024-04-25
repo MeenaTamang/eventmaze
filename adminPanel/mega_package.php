@@ -1,7 +1,7 @@
 <!-- nav_Bar -->
 <?php include 'nav_bar.php'?>
 
-<?php include 'connect.php';
+<?php include '../loginPage/db.php';
     if(isset($_POST['add_mega'])){
         $mega_name=$_POST['mega_name'];
         $mega_summary=$_POST['mega_summary'];
@@ -14,8 +14,8 @@
         $mega_image_temp_name=$_FILES['mega_image']['tmp_name'];
         $mega_image_folder='images/'.$mega_image;
         
-        $insert_query=mysqli_query($conn,"insert into `mega` (name, summary, veg, nonveg, features, price, population, image) values
-        ('$mega_name','$mega_summary','$mega_veg','$mega_nonveg','$mega_feature','$mega_price','$mega_population','$mega_image')") or die("Insert query failed");
+        $insert_query=mysqli_query($conn,"insert into `events` (name, summary, veg, nonveg, features, price, population, image, type) values
+        ('$mega_name','$mega_summary','$mega_veg','$mega_nonveg','$mega_feature','$mega_price','$mega_population','$mega_image', 'mega')") or die("Insert query failed");
         if($insert_query){
             move_uploaded_file($mega_image_temp_name,$mega_image_folder);
             $display_message= "Mega-EVent package inserted Successfully";

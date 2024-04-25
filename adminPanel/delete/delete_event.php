@@ -2,7 +2,7 @@
 
 <!-- -------php code-------- -->
 <?php
-include '../connect.php';
+include '../../loginPage/db.php';
 if(isset($_GET['delete'])){
     $delete_id=$_GET['delete'];
     $delete_query=mysqli_query($conn, "Delete from `eventhappen` where id=$delete_id") or

@@ -32,7 +32,7 @@
 
 
         <!-- ---------connecting------------- -->
-        <?php include '../adminPanel/connect.php';?>
+        <?php include '../loginPage/db.php';?>
             
 
             <div class="image-container">

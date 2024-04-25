@@ -2,7 +2,7 @@
 <?php include 'nav_bar.php'?>
 
 <!-- !-- including php logic-connecting to database -->
-<?php include 'connect.php';
+<?php include '../loginPage/db.php';
 
 
 // update logic
@@ -21,7 +21,7 @@ if(isset($_POST['update_mega'])){
     $update_mega_image_folder='images/'.$update_mega_image;
 
     // update query
-    $update_mega=mysqli_query($conn, "Update `mega` set
+    $update_mega=mysqli_query($conn, "Update `events` set
     name='$update_mega_name',summary='$update_mega_summary',veg='$update_mega_veg',nonveg='$update_mega_nonveg',price='$update_mega_price',population='$update_mega_population',
     image='$update_mega_image' where id=$update_mega_id");
     if($update_mega){
@@ -87,7 +87,7 @@ if(isset($_POST['update_mega'])){
             if(isset($_GET['edit'])){
                 $edit_id=$_GET['edit'];
                 // echo $edit_id;
-                $edit_query=mysqli_query($conn, "Select * from `mega` where id=$edit_id");
+                $edit_query=mysqli_query($conn, "Select * from `events` where id=$edit_id");
                 if(mysqli_num_rows($edit_query)>0){
                     $fetch_data=mysqli_fetch_assoc($edit_query);
                         // $row=$fetch_data['price'];

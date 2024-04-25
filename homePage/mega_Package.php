@@ -91,16 +91,16 @@
 
 
 <!------- -----------------connecting------------------ -->
-    <?php include '../adminPanel/connect.php';?>
+    <?php include '../loginPage/db.php';?>
 
 
             <!-- -------Package-container------ -->
             <div class="package-container">
                 <?php
-                $select_mega=mysqli_query($conn,"Select *from `mega`");
+                $select_mega=mysqli_query($conn,"Select *from `events`  where type='mega'");
                 if(mysqli_num_rows($select_mega)>0){
                 while($fetch_mega=mysqli_fetch_assoc($select_mega)){
-
+                    $eventID=$fetch_mega["id"];
                 ?>
 
             <div class="package">
@@ -128,7 +128,7 @@
                     <button>
                             <?php
                             if(isset($_SESSION["userId"])){
-                            echo '<a href="calender.php" class="package-button">Book Now</a>';
+                            echo '<a href="selectEvent.php?id='.$eventID.'" class="package-button">Book Now</a>';
 
                             }else{
                             echo '<a href="../loginPage/login.html" target="_blank" class="package-button">Book Now</a>';

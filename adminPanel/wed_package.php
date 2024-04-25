@@ -1,7 +1,7 @@
 <!-- nav_Bar -->
 <?php include 'nav_bar.php'?>
 
-<?php include 'connect.php';
+<?php include '../loginPage/db.php';
     if(isset($_POST['add_wed'])){
         $wed_name=$_POST['wed_name'];
         $wed_summary=$_POST['wed_summary'];
@@ -14,8 +14,8 @@
         $wed_image_temp_name=$_FILES['wed_image']['tmp_name'];
         $wed_image_folder='images/'.$wed_image;
         
-        $insert_query=mysqli_query($conn,"insert into `wed` (name, summary, veg, nonveg, features, price, population, image) values
-        ('$wed_name','$wed_summary','$wed_veg','$wed_nonveg','$wed_feature','$wed_price','$wed_population','$wed_image')") or die("Insert query failed");
+        $insert_query=mysqli_query($conn,"insert into `events` (name, summary, veg, nonveg, features, price, population, image, type) values
+        ('$wed_name','$wed_summary','$wed_veg','$wed_nonveg','$wed_feature','$wed_price','$wed_population','$wed_image','wedding')") or die("Insert query failed");
         if($insert_query){
             move_uploaded_file($wed_image_temp_name,$wed_image_folder);
             $display_message= "Wedding package inserted Successfully";

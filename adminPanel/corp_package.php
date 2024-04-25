@@ -1,7 +1,7 @@
 <!-- nav_Bar -->
 <?php include 'nav_bar.php'?>
 
-<?php include 'connect.php';
+<?php include '../loginPage/db.php';
     if(isset($_POST['add_corporate'])){
         $corporate_name=$_POST['corporate_name'];
         $corporate_summary=$_POST['corporate_summary'];
@@ -14,8 +14,8 @@
         $corporate_image_temp_name=$_FILES['corporate_image']['tmp_name'];
         $corporate_image_folder='images/'.$corporate_image;
         
-        $insert_query=mysqli_query($conn,"insert into `corporate` (name, summary, veg, nonveg, features, price, population, image) values
-        ('$corporate_name','$corporate_summary','$corporate_veg','$corporate_nonveg','$corporate_feature','$corporate_price','$corporate_population','$corporate_image')") or die("Insert query failed");
+        $insert_query=mysqli_query($conn,"insert into `events` (name, summary, veg, nonveg, features, price, population, image, type) values
+        ('$corporate_name','$corporate_summary','$corporate_veg','$corporate_nonveg','$corporate_feature','$corporate_price','$corporate_population','$corporate_image', 'corporate')") or die("Insert query failed");
         if($insert_query){
             move_uploaded_file($corporate_image_temp_name,$corporate_image_folder);
             $display_message= "corporate event package inserted Successfully";

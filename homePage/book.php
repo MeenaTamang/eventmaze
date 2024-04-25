@@ -1,4 +1,11 @@
 <?php
+session_start();
+include '../loginPage/db.php';
+$eventID = $_SESSION['selectedEvent'];
+$userID = $_SESSION['userId'];
+$usersql = "select firstname, lastname, email From users where id='$userID'";
+$result = $conn->query($usersql);
+$userdata = $result->fetch_assoc();
 
 if(isset($_GET['date'])){
     $date = $_GET ['date'];
@@ -8,8 +15,8 @@ if(isset($_POST['submit'])){
     $name = $_POST['name'];
     $email = $_POST['email'];
     $mysqli = new mysqli('localhost', 'root','','eventmaze');
-    $stmt = $mysqli->prepare("INSERT INTO bookings(name,email,date) VALUES (?,?,?)");
-    $stmt->bind_param('sss', $name, $email, $date);
+    $stmt = $mysqli->prepare("INSERT INTO bookings(name,email,date,event_id) VALUES (?,?,?,?)");
+    $stmt->bind_param('ssss', $name, $email, $date, $eventID);
     $stmt->execute();
     $msg = "<div class='alert alert-success'>Booking Successfull</div>";
     $stmt->close();
@@ -41,11 +48,11 @@ if(isset($_POST['submit'])){
             <form action="" method="post" autocomplete="off">
                 <div class="form-group">
                     <label for="">Name</label>
-                    <input type="text" class="form-control" name="name">
+                    <input type="text" class="form-control" name="name" value="<?php echo $userdata['firstname'].' '.$userdata['lastname']?>">
                 </div> 
                 <div class="form-group">
                     <label for="">Email</label>
-                    <input type="email" class="form-control" name="email">
+                    <input type="email" class="form-control" name="email" value="<?php echo $userdata['email']?>">
                 </div>  
                 <button class="btn btn-primary" type="submit" name="submit">Submit</button>
             </form>

@@ -2,7 +2,8 @@
 <?php include 'nav_bar.php'?>
 
 <!-- including php logic-connecting to database -->
-<?php include 'connect.php'?>
+<?php include '../loginPage/db.php'?>
+
 
 
 <!DOCTYPE html>
@@ -35,7 +36,7 @@
             
 <!------- php code to get the inserted mega from database ------------>
                 <?php
-                $display_mega=mysqli_query($conn,"Select *from `mega`");
+                $display_mega=mysqli_query($conn,"Select *from `events` where type='mega'");
                 $num=1;
                 if(mysqli_num_rows($display_mega)>0){
                     echo "<table>
@@ -70,7 +71,7 @@
                         <td><?php echo $row['price']?></td>
                         <td><?php echo $row['population']?></td>
                         <td>
-                            <a href="delete/delete_mega.php?delete=<?php echo $row['id']?>"
+                            <a href="delete/delete_package.php?delete=<?php echo $row['id']?>"
                             class="delete_mega_btn" onclick="return confirm('Are you sure you want to delete this Mega-Event Package');">
                             <i class='bx bxs-trash-alt'></i></a>
                             <a href="update_mega.php?edit=<?php echo $row['id']?>"
