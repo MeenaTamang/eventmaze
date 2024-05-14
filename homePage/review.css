@@ -95,7 +95,13 @@ button:hover{
 .edit-btn .bx{
     display: flex;
     align-items: end;
+    font-size: 1.3rem;
 }
+.edit-btn a {
+    text-decoration: none;
+    color: #707070;
+}
+
 
 .box-top{
     display: flex;

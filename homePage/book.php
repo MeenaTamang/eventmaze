@@ -7,6 +7,8 @@ $usersql = "select firstname, lastname, email From users where id='$userID'";
 $result = $conn->query($usersql);
 $userdata = $result->fetch_assoc();
 
+$current_date = date("Y-m-d");
+
 if(isset($_GET['date'])){
     $date = $_GET ['date'];
 }
@@ -15,8 +17,8 @@ if(isset($_POST['submit'])){
     $name = $_POST['name'];
     $email = $_POST['email'];
     $mysqli = new mysqli('localhost', 'root','','eventmaze');
-    $stmt = $mysqli->prepare("INSERT INTO bookings(name,email,date,event_id) VALUES (?,?,?,?)");
-    $stmt->bind_param('ssss', $name, $email, $date, $eventID);
+    $stmt = $mysqli->prepare("INSERT INTO bookings(name,email,date,event_id,booking_date,user_id) VALUES (?,?,?,?,?,?)");
+    $stmt->bind_param('ssssss', $name, $email, $date, $eventID, $current_date, $userID);
     $stmt->execute();
     $msg = "<div class='alert alert-success'>Booking Successfull</div>";
     $stmt->close();
@@ -55,6 +57,7 @@ if(isset($_POST['submit'])){
                     <input type="email" class="form-control" name="email" value="<?php echo $userdata['email']?>">
                 </div>  
                 <button class="btn btn-primary" type="submit" name="submit">Submit</button>
+                <button><a href="eventPlanner.php"  class="package-button">Back</a></button>
             </form>
         </div>
     </div>

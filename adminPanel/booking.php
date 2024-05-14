@@ -48,13 +48,14 @@ include '../loginPage/db.php';
         <th>Email</th>
         <th>Date</th>
         <th>Amount</th>
+        <th>Booking Date</th>
         <th>Action</th>
       </tr>
     </thead>
     <tbody>
 
     <?php
-      $sql = "SELECT b.id, b.name, b.email, b.date, e.name eventname, e.type, e.price FROM bookings b LEFT JOIN events e ON b.event_id=e.id";
+      $sql = "SELECT b.id, b.name, b.email, b.date, b.booking_date, e.name eventname, e.type, e.price FROM bookings b LEFT JOIN events e ON b.event_id=e.id";
       $result = $conn->query($sql);
 
       $i = 1;
@@ -68,6 +69,7 @@ include '../loginPage/db.php';
         <td><?php echo $data['email'];?></td>
         <td><?php echo $data['date'];?></td>
         <td><?php echo $data['price'];?></td>
+        <td><?php echo $data['booking_date'];?></td>
         <td>
         <a href="delete/delete_booking.php?delete=<?php echo $data['id']?>"
         class="delete_booking_btn" onclick="return confirm('Are you sure you want to delete this booking details?');">

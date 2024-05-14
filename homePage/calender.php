@@ -102,7 +102,7 @@ return $calendar;
   <title>Calendar System</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="calendar.css">
+  <link rel="stylesheet" href="calender.css">
 </head>
 <body>
   

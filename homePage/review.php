@@ -67,7 +67,10 @@
                             </div>
 
                             <div class="edit-btn">
-                                <i class='bx bx-dots-vertical-rounded'></i>
+                            <a href="delete.php?delete=<?php echo $fetch_review['id']?>"
+                                class="delete_btn" onclick="return confirm('Are you sure you want to delete this review?');">
+                            <i class='bx bxs-trash-alt'></i></a>
+                                <!-- <i class='bx bx-dots-vertical-rounded'></i> -->
                             </div>
 
                         </div>
