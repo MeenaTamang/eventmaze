@@ -1,0 +1,107 @@
+.section-container{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 340px);
+    left: 340px;
+    transition: all 0.3s ease;
+}
+.section_content{
+    font-size: 25px;
+    font-weight: 500;
+    color: #707070;
+    margin: 20px;
+}
+/* heading text section  */
+
+:root {
+    --color1: #a68cb6;
+    --color4: #734a8d;
+    --black: #000;
+    --white: #fff;
+    --lightpurple: #F6F5FF;
+    --red: rgb(238, 62, 62);
+
+}
+/* edit review */
+.display_message {
+    background-color: var(--color1);
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.display_message span {
+    font-size: 1rem;
+}
+.display_message i {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.display_message i:hover {
+    color: var(--red);
+}
+.container {
+    border-radius: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+    height: 110vh;
+    background-color: var(--lightpurple);
+}
+section {
+    padding: 1rem;
+}
+.update_event {
+    max-width: 600px;
+    max-height: 900px;
+    background-color: var(--color1);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+.update_event .input_fields{
+    padding: 0.3rem 0.3rem;
+    font-size: 1rem;
+    color: var(--black);
+    background-color: var(--white);
+    margin: 9px 0;
+    width: 100%;
+  }
+  .update_event_btn{
+    text-align: center;
+    color: var(--red);
+    font-size: 1rem;
+    padding: 0 1rem;
+    cursor: pointer;
+  }
+  .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .submit_btn,
+.edit_btn, .cancel_btn {
+display: block;
+width: 50%;
+text-align: center;
+background-color: #734a8d;
+color: var(--white);
+font-size: 1rem;
+padding: 0.5rem 0.5rem;
+border-radius: 0.5rem;
+cursor: pointer;
+margin-top: 5px;
+margin: 0 auto;
+text-decoration: none;
+}
+.submit_btn:hover {
+color: var(--lightpurple);
+}
+img {
+    width: 35%;
+    margin: 0 auto;
+  }
+  
