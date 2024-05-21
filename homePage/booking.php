@@ -55,7 +55,7 @@ $result = $conn->query($sql);
             <div class="box"> 
                         <div class="event_type">
 
-                        <strong>INVOICE</strong></br>
+                        <strong>I N V O I C E</strong></br>
 
                         <hr style="border: none; border-top: 1px solid black;"></br>
                         <div class="left"><?php echo $data['name']."<br>".$data['email']?></div>
@@ -69,8 +69,12 @@ $result = $conn->query($sql);
                         <i>booked</i>
                         </div>
             </div>
-                    <?php
-                    }}?>
+            <?php
+            }
+                }else{
+                    echo "<div class='empty_text'>No Any Booking Details Available!!</div>";
+                    }
+                    ?>
 
         </div>
 

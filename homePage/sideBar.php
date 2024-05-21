@@ -2,6 +2,7 @@
     session_start();
     ?>
     
+    <link rel="icon" type="image/png" href="cemlogo.png">
     
     <div class="main">
         <div class="menu">

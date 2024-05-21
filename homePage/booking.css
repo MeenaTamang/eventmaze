@@ -91,6 +91,13 @@
     text-align: center; 
 }
 
+.empty_text{
+    font-size: 5rem; 
+    margin-top: 10%;
+    margin-bottom: 12%;
+
+}
+
 @media (max-width: 1060px) {
     .box{
         width: 75%;

@@ -1,4 +1,7 @@
 <?php session_start(); ?>
+
+<link rel="icon" type="image/png" href="cemlogo.png">
+
 <div class="sidebar active">
     <div class="logo_container">
         <div class="logo">

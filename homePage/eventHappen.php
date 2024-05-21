@@ -52,7 +52,7 @@
           <?php
           }
           }else{
-            echo "<div class='empty_text'>No Event Available</div>";
+            echo "<div class='empty_text'>No Event Available!!</div>";
           }
           ?>
         </div>
